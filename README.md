@@ -7,6 +7,8 @@ ModernBERT-large model that picks one answer from a list of options, and fine-tu
 positions labelled by a strong heuristic Tetris player (the "teacher"). The fine-tuned
 model (the "student") then plays Tetris entirely on its own, on a laptop.
 
+**Trained model:** [justforfun0906/laya-tetris](https://huggingface.co/justforfun0906/laya-tetris) on Hugging Face.
+
 ## Results
 
 All numbers are from an Apple M2 MacBook (16 GB), training on the MPS backend.
@@ -103,9 +105,19 @@ python play.py --policy teacher --games 3
 python watch.py --policy teacher --delay 0.05
 ```
 
+### Use the trained model
+
+Download the trained weights (1.6 GB) from Hugging Face and watch it play:
+
+```bash
+hf download justforfun0906/laya-tetris --local-dir runs/laya-tetris
+python watch.py --model runs/laya-tetris
+python play.py --policy student --model runs/laya-tetris --games 3
+```
+
 ### Reproduce the trained model
 
-The trained weights (1.6 GB) are too large for GitHub, so rebuild them:
+Or train it yourself from scratch:
 
 ```bash
 # 1. Generate 15k teacher-labelled positions (CPU only, no model needed)
