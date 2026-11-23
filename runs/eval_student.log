@@ -1,0 +1,6 @@
+game 0: 198 lines, 500 pieces, piece cap reached
+game 1: 199 lines, 500 pieces, piece cap reached
+game 2: 197 lines, 500 pieces, piece cap reached
+
+student: mean lines 198.0 (min 197, max 199) over 3 games, cap 500 pieces
+agreement with teacher (within shortlist): 84.3%, 173 ms/move

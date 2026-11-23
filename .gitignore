@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local tool settings
+.claude/
+.DS_Store
+
+# Generated data and model checkpoints (large; regenerate with gen_data.py / train.py)
+data/
+runs/*
+!runs/eval_student.log
+*.safetensors
